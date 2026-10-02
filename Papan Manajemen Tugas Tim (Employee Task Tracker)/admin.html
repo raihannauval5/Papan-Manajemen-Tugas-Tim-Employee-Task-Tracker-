@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Manager Dashboard - Pembagian Tugas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Task Allocator - Manager</h1>
+      <p>Berikan dan kelola tugas untuk anggota tim</p>
+    </header>
+
+    <!-- Form Tambah Tugas -->
+    <div class="card">
+      <h2>Buat Tugas Baru</h2>
+      <form id="form-task">
+        <input type="hidden" id="task-id">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Judul Tugas</label>
+            <input type="text" id="judul" placeholder="Contoh: Perbaiki bug login..." required>
+          </div>
+
+          <div class="form-group">
+            <label>Tugaskan Kepada (Nama Karyawan)</label>
+            <input type="text" id="karyawan" placeholder="Nama karyawan..." required>
+          </div>
+
+          <div class="form-group">
+            <label>Prioritas</label>
+            <select id="prioritas" required>
+              <option value="Tinggi">Tinggi (High)</option>
+              <option value="Sedang" selected>Sedang (Medium)</option>
+              <option value="Rendah">Rendah (Low)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Tenggat Waktu (Deadline)</label>
+            <input type="date" id="deadline" required>
+          </div>
+
+          <div class="form-group full-width">
+            <label>Deskripsi Tugas</label>
+            <textarea id="deskripsi" placeholder="Detail petunjuk pengerjaan tugas..." required></textarea>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" id="btn-simpan" class="btn-primary">Bagikan Tugas</button>
+          <button type="button" id="btn-batal" class="btn-secondary" style="display:none;">Batal</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Daftar Semua Tugas -->
+    <div class="card">
+      <h2>Daftar Tugas Tim</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Judul & Deskripsi</th>
+              <th>Penerima Tugas</th>
+              <th>Prioritas</th>
+              <th>Deadline</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="tabel-body-admin">
+            <!-- Data dimasukkan via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

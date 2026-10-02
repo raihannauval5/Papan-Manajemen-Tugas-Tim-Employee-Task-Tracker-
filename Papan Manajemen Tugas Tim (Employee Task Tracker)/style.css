@@ -1,0 +1,198 @@
+/* Reset & Base Dark Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #0f172a; /* Dark Slate */
+  color: #f8fafc;
+  padding: 30px 20px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #f1f5f9;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* Card Wrapper */
+.card {
+  background: #1e293b; /* Lighter Slate */
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 18px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 12px;
+}
+
+/* Layout Form */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.status-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #f8fafc;
+  background-color: #0f172a;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.status-select:focus {
+  outline: none;
+  border-color: #6366f1; /* Indigo */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Tombol-tombol */
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #4f46e5;
+}
+
+.btn-secondary {
+  background-color: #475569;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Tabel Data */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-weight: 600;
+  padding: 12px 14px;
+  border-bottom: 1px solid #334155;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #334155;
+  vertical-align: middle;
+}
+
+tr:hover {
+  background-color: #334155;
+}
+
+/* Badges (Prioritas & Status) */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Badge Prioritas */
+.prioritas-tinggi { background-color: #451a1a; color: #f87171; border: 1px solid #991b1b; }
+.prioritas-sedang { background-color: #451a03; color: #fbbf24; border: 1px solid #92400e; }
+.prioritas-rendah { background-color: #064e3b; color: #34d399; border: 1px solid #065f46; }
+
+/* Badge Status */
+.status-to-do { background-color: #1e1b4b; color: #818cf8; }
+.status-in-progress { background-color: #312e81; color: #a5b4fc; }
+.status-completed { background-color: #064e3b; color: #6ee7b7; }
+
+/* Tombol Aksi */
+.btn-icon {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.btn-edit { background-color: #0284c7; color: white; }
+.btn-delete { background-color: #dc2626; color: white; }
